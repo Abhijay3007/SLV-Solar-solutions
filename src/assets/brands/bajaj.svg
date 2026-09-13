@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <g transform="translate(14, 16)">
+    <path d="M 0 14 C 8 0, 20 0, 28 14 C 20 28, 8 28, 0 14 Z" fill="#0055A5" />
+    <circle cx="14" cy="14" r="6" fill="#FFFFFF" />
+  </g>
+  <text x="48" y="38" font-family="'Arial Black', 'Inter', sans-serif" font-weight="900" font-size="22" fill="#0055A5" letter-spacing="-0.5">BAJAJ</text>
+</svg>

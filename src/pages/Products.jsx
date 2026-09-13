@@ -28,7 +28,7 @@ const Products = () => {
             Our Solar Products
           </h1>
           <p className="mt-3 text-sm md:text-base text-emerald-100/80 max-w-xl">
-            Sourced and engineered by Riyansh Solar Power Plus Pvt Ltd. Certified tier-1 efficiency and performance.
+            Sourced and engineered for tier-1 efficiency, reliability, and long-term performance.
           </p>
         </div>
       </section>
@@ -76,7 +76,7 @@ const Products = () => {
           <SectionHeading 
             overline="Warranty Standard" 
             title="Premium Performance Assurances" 
-            subtitle="All engineering, parts configurations, solar fan assemblies, and structural mounts carry original warranty coverages backed by Riyansh Solar Power Plus Pvt Ltd. Our systems are built to withstand Indian tropical elements."
+            subtitle="All engineering, parts configurations, solar fan assemblies, and structural mounts carry original warranty coverages. Our systems are built to withstand Indian tropical elements."
           />
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs text-slate-600 font-medium">
             <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">

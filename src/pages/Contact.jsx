@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { MapPin, Phone, Mail, Clock, MessageCircle, PhoneCall } from 'lucide-react';
 import SectionHeading from '../components/SectionHeading';
 import ContactForm from '../components/ContactForm';
+import { BUSINESS_INFO } from '../data/businessInfo';
 
 const Contact = () => {
   const routerLocation = useLocation();
@@ -58,7 +59,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-primary">Our Location</h4>
-                  <p className="text-xs text-slate-500 mt-1">Banglore – 411051, Karnataka, India</p>
+                  <p className="text-xs text-slate-500 mt-1">{BUSINESS_INFO.locationFull}</p>
                 </div>
               </div>
 
@@ -69,8 +70,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-primary">Phone Numbers</h4>
-                  <a href="tel:+919353082680" className="text-xs text-slate-500 hover:text-primary hover:underline mt-1 block">
-                    93530 82680
+                  <a href={BUSINESS_INFO.phoneTel} className="text-xs text-slate-500 hover:text-primary hover:underline mt-1 block">
+                    {BUSINESS_INFO.phoneDisplay}
                   </a>
                 </div>
               </div>
@@ -82,8 +83,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-primary">Email Address</h4>
-                  <a href="mailto:manojpradeep586@gmail.com" className="text-xs text-slate-500 hover:text-primary hover:underline mt-1 block">
-                    manojpradeep586@gmail.com
+                  <a href={BUSINESS_INFO.emailMailto} className="text-xs text-slate-500 hover:text-primary hover:underline mt-1 block break-all">
+                    {BUSINESS_INFO.email}
                   </a>
                 </div>
               </div>
@@ -95,7 +96,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-primary">Business Hours</h4>
-                  <p className="text-xs text-slate-505 mt-1 font-sans">Sunday - Friday: 9 am - 8 pm (Saturday Closed)</p>
+                  <p className="text-xs text-slate-505 mt-1 font-sans">{BUSINESS_INFO.workingHours}</p>
                 </div>
               </div>
 
@@ -106,14 +107,14 @@ const Contact = () => {
               <span className="text-[10px] uppercase font-extrabold tracking-widest text-[#0f4c3a] block">Quick Links</span>
               <div className="grid grid-cols-2 gap-3">
                 <a
-                  href="tel:+919353082680"
+                  href={BUSINESS_INFO.phoneTel}
                   className="flex items-center justify-center space-x-1.5 bg-slate-50 hover:bg-primary hover:text-white border border-slate-150 py-3 rounded-xl text-xs font-bold text-primary uppercase transition-colors"
                 >
                   <PhoneCall className="h-4 w-4" />
                   <span>Call Now</span>
                 </a>
                 <a
-                  href="https://wa.me/919353082680?text=Hi,%20I'm%20interested%20in%20solar%20solutions."
+                  href={BUSINESS_INFO.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center space-x-1.5 bg-slate-50 hover:bg-emerald-580 hover:text-white border border-slate-150 py-3 rounded-xl text-xs font-bold text-primary uppercase transition-colors"
@@ -141,26 +142,30 @@ const Contact = () => {
           <SectionHeading 
             overline="Map Location" 
             title="Locate SLV Solar Solutions" 
-            subtitle="Serving residential homes, factories, and utility installations across Bangalore, Karnataka, India."
+            subtitle="Serving residential homes, factories, and utility installations across Nelamangala, Karnataka, India."
           />
-          <div className="relative rounded-3xl overflow-hidden border border-slate-200 h-96 max-w-5xl mx-auto bg-slate-100 flex items-center justify-center text-center p-8">
-            {/* Visual map representation placeholder */}
-            <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] bg-[size:16px_16px] opacity-75" />
-            <div className="relative z-10 flex flex-col items-center max-w-sm">
-              <MapPin className="h-12 w-12 text-primary mb-4 animate-bounce" />
-              <h4 className="font-bold text-primary text-xl">Bangalore, Karnataka, India</h4>
-              <p className="text-xs text-slate-500 leading-relaxed mt-2 mb-6">
-                Our site surveyor network travels to your location in Bengaluru and neighboring regions to evaluate roof load capabilities.
-              </p>
-              <a 
-                href="https://maps.google.com/?q=Bangalore" 
-                target="_blank" 
-                rel="noreferrer" 
-                className="bg-primary hover:bg-primary-light text-white text-xs font-extrabold uppercase tracking-wider px-6 py-3 rounded-xl shadow-md transition-all active:scale-97"
-              >
-                Directions in Google Maps
-              </a>
-            </div>
+          <div className="relative rounded-3xl overflow-hidden border border-slate-200 h-96 max-w-5xl mx-auto bg-slate-100 flex items-center justify-center text-center p-2">
+            <iframe
+              title="SLV Solar Solutions Location Map"
+              src={BUSINESS_INFO.mapEmbedUrl}
+              width="100%"
+              height="100%"
+              style={{ border: 0, borderRadius: '1.25rem' }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+          <div className="mt-6 text-center">
+            <a 
+              href={BUSINESS_INFO.mapQueryUrl} 
+              target="_blank" 
+              rel="noreferrer" 
+              className="inline-flex items-center space-x-2 bg-primary hover:bg-primary-light text-white text-xs font-extrabold uppercase tracking-wider px-6 py-3 rounded-xl shadow-md transition-all active:scale-97"
+            >
+              <span>Get Directions in Google Maps</span>
+              <MapPin className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </section>

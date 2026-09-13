@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <path d="M 12 30 L 26 15 L 34 23 L 20 38 Z" fill="#005B9E" />
+  <path d="M 22 38 L 36 23 L 44 31 L 30 46 Z" fill="#0099D8" />
+  <text x="48" y="38" font-family="'Inter', sans-serif" font-weight="900" font-size="18" fill="#005B9E" letter-spacing="-0.3">LUMINOUS</text>
+</svg>

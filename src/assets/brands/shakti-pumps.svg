@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <path d="M 28 15 C 28 15, 15 28, 15 36 C 15 44, 21 50, 28 50 C 35 50, 41 44, 41 36 C 41 28, 28 15, 28 15 Z" fill="#008844" />
+  <path d="M 28 24 C 28 24, 20 33, 20 38 C 20 43, 24 46, 28 46 Z" fill="#77CC33" />
+  <text x="46" y="32" font-family="'Inter', sans-serif" font-weight="900" font-size="18" fill="#006633" letter-spacing="-0.3">SHAKTI</text>
+  <text x="47" y="44" font-family="'Inter', sans-serif" font-weight="800" font-size="10" fill="#222222" letter-spacing="1.5">PUMPS</text>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <rect x="12" y="15" width="34" height="30" rx="4" fill="#E31E24" />
+  <text x="29" y="37" font-family="'Arial Black', sans-serif" font-weight="900" font-size="18" fill="#FFFFFF" text-anchor="middle">U</text>
+  <text x="54" y="35" font-family="'Inter', 'Arial Black', sans-serif" font-weight="900" font-size="22" fill="#0C2340" letter-spacing="-0.5">UTL</text>
+  <text x="55" y="46" font-family="'Inter', sans-serif" font-weight="800" font-size="9" fill="#E31E24" letter-spacing="1.5">SOLAR</text>
+</svg>

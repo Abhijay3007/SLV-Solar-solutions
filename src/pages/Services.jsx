@@ -7,6 +7,7 @@ import {
 import SectionHeading from '../components/SectionHeading';
 import CTAButton from '../components/CTAButton';
 import { SERVICES } from '../data/solarData';
+import { BUSINESS_INFO } from '../data/businessInfo';
 
 const Services = () => {
   const navigate = useNavigate();
@@ -149,14 +150,14 @@ const Services = () => {
             Switch to Sustainable Solar Sizing
           </h2>
           <p className="text-sm text-emerald-100/90 max-w-xl mx-auto leading-relaxed">
-            All solar project configurations and installation checks details are backed by our core engine collaborator: Riyansh Solar Power Plus Pvt Ltd.
+            All solar project configurations and installation checks are carried out by our team of experienced solar engineers.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-2">
             <CTAButton to="/contact" variant="secondary" className="w-full sm:w-auto">
               Get Free Consultation
             </CTAButton>
-            <CTAButton href="tel:+919353082680" variant="outline" className="w-full sm:w-auto !border-white !text-white hover:!bg-white/10">
-              Call Support: 93530 82680
+            <CTAButton href={BUSINESS_INFO.phoneTel} variant="outline" className="w-full sm:w-auto !border-white !text-white hover:!bg-white/10">
+              Call Support: {BUSINESS_INFO.phoneDisplay}
             </CTAButton>
           </div>
         </div>

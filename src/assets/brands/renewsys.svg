@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <g transform="translate(15, 12)">
+    <rect x="0" y="0" width="32" height="36" rx="4" fill="#003B70" />
+    <path d="M 4 4 H 14 V 16 H 4 Z M 18 4 H 28 V 16 H 18 Z M 4 20 H 14 V 32 H 4 Z M 18 20 H 28 V 32 H 18 Z" fill="#00A859" opacity="0.9"/>
+  </g>
+  <text x="56" y="32" font-family="'Inter', 'Arial Black', sans-serif" font-weight="900" font-size="16" fill="#003B70" letter-spacing="-0.3">RENEWSYS</text>
+  <text x="57" y="44" font-family="'Inter', sans-serif" font-weight="800" font-size="8" fill="#00A859" letter-spacing="1">SOLAR PV</text>
+</svg>

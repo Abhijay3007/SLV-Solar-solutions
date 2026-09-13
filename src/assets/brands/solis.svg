@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <circle cx="28" cy="30" r="14" fill="#005B9E" />
+  <path d="M 28 20 A 10 10 0 0 1 38 30 L 28 30 Z" fill="#F47920" />
+  <text x="50" y="38" font-family="'Inter', sans-serif" font-weight="900" font-size="24" fill="#005B9E" letter-spacing="-0.5">Solis</text>
+</svg>

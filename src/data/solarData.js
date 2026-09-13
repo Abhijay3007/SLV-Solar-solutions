@@ -102,7 +102,7 @@ export const SERVICES = [
     image: serviceEpc,
     description: 'From design and procurement to installation and maintenance, we offer end-to-end EPC services for large-scale solar projects. Our expertise ensures optimal system performance and long-term savings.',
     benefits: [
-      'Backed by Riyansh Solar Power Plus Pvt Ltd core engine',
+      'Backed by tier-1 engineering and components',
       'End-to-end site approvals and coordination',
       'Highest safety and quality construction compliance',
       'Maximum return on investment (ROI)'
@@ -144,7 +144,7 @@ export const PRODUCTS = [
     category: 'Solar Panels',
     iconName: 'sun',
     image: productSolarPanel,
-    description: 'Engineered, procured, and installed by Riyansh Solar Power Plus Pvt Ltd. High performance solar output for years to come.',
+    description: 'Engineered, procured, and installed by SLV Solar Solutions. High performance solar output for years to come.',
     warranties: [
       'Panel -- 25 Years of Performance Warranty',
       'Inverter -- 5 Years + Extended Warranty Package'
@@ -169,7 +169,7 @@ export const PRODUCTS = [
     category: 'Water Pump',
     iconName: 'droplet',
     image: productSolarPump,
-    description: 'Solar powered pumps ideal for farming, irrigation, and deep-borewells. Includes controller. Mount structure, pipes and installation can be provided at additional cost by Riyansh Solar.',
+    description: 'Solar powered pumps ideal for farming, irrigation, and deep-borewells. Includes controller. Mount structure, pipes and installation can be provided at additional cost by SLV Solar.',
     warranties: [
       'Panel -- 25 Years of Performance Warranty',
       'Pump -- 1 Year + Extended Warranty',
@@ -239,9 +239,9 @@ export const PRODUCTS = [
 
 export const WHY_CHOOSE_US = [
   {
-    title: 'Authorized Franchise',
-    description: 'Backed by Riyansh Solar Power Plus Pvt Ltd',
-    details: 'Our affiliation guarantees access to certified tier-1 accessories, experienced design software engines, and original hardware backing.'
+    title: 'Trusted Solar Partner',
+    description: 'Certified Tier-1 Technology',
+    details: 'Our expertise guarantees access to certified tier-1 accessories, experienced design software engines, and original hardware backing.'
   },
   {
     title: 'Premium Quality',

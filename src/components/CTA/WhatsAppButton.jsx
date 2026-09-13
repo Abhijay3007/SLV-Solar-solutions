@@ -1,8 +1,9 @@
 import React from 'react';
 import { MessageSquare } from 'lucide-react';
+import { BUSINESS_INFO } from '../../data/businessInfo';
 
 const WhatsAppButton = () => {
-  const number = '9353082680';
+  const number = BUSINESS_INFO.whatsappNumber;
   const text = encodeURIComponent("Hi, I'm interested in solar solutions from SLV Solar Solutions. Please share details.");
   const whatsappUrl = `https://wa.me/91${number}?text=${text}`;
 

@@ -34,7 +34,7 @@ const About = () => {
             <SectionHeading 
               overline="Your Trusted Partner" 
               title="Your Trusted Solar Partner"
-              subtitle="Welcome to SLV Solar Solutions, your one-stop destination for high-quality solar energy solutions. As an authorized franchise of Riyansh Solar Power Plus Pvt Ltd, we are committed to making solar power accessible, affordable, and reliable for homes, businesses, and industries."
+              subtitle="Welcome to SLV Solar Solutions, your one-stop destination for high-quality solar energy solutions. We are committed to making solar power accessible, affordable, and reliable for homes, businesses, and industries."
               align="left"
             />
             
@@ -43,13 +43,13 @@ const About = () => {
             </p>
 
             <p className="text-sm text-slate-600 leading-relaxed">
-              Whether you want to install a solar panel system for your home or need a large-scale commercial solar project, we are here to help. We guide you through the process, source MNRE approved equipment (including panels with 25-years warrants), configure net metering adapters, and handle your government subsidy submissions.
+              Whether you want to install a solar panel system for your home or need a large-scale commercial solar project, we are here to help. We guide you through the process, source MNRE approved equipment (including panels with 25-years warranties), configure net metering adapters, and handle your government subsidy submissions.
             </p>
 
             <div className="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="flex items-center space-x-3 bg-white p-4 rounded-xl border border-slate-105 shadow-sm">
                 <CheckCircle className="h-5 w-5 text-emerald-600 shrink-0" />
-                <span className="text-xs font-bold text-primary">Authorized Franchise Partner</span>
+                <span className="text-xs font-bold text-primary">Certified Solar Partner</span>
               </div>
               <div className="flex items-center space-x-3 bg-white p-4 rounded-xl border border-slate-105 shadow-sm">
                 <CheckCircle className="h-5 w-5 text-emerald-600 shrink-0" />
@@ -90,15 +90,15 @@ const About = () => {
               </p>
             </div>
 
-            {/* Backed by block */}
+            {/* Engineering Standards block */}
             <div className="bg-primary hover:bg-primary-dark text-white rounded-3xl p-8 border border-emerald-950/20 shadow-md transition-colors duration-300">
-              <h3 className="text-lg font-bold mb-2">Franchise backing</h3>
+              <h3 className="text-lg font-bold mb-2">Engineering Excellence</h3>
               <p className="text-xs text-emerald-150/90 leading-relaxed mb-6">
-                All engineering, hardware sourcing, and installation checklists for SLV Solar Solutions are overseen and completed by Riyansh Solar Power Plus Pvt Ltd.
+                All engineering, hardware sourcing, and installation checklists for SLV Solar Solutions are overseen and completed by certified solar installation specialists.
               </p>
               <div className="border-t border-white/10 pt-4 flex justify-between items-center text-xs">
-                <span>Core Engineering Partner</span>
-                <span className="font-bold text-secondary text-right">Riyansh Solar Power</span>
+                <span>Quality Compliance</span>
+                <span className="font-bold text-secondary text-right">SLV Solar Engineering</span>
               </div>
             </div>
 

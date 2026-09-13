@@ -101,7 +101,7 @@ const Subsidy = () => {
               
               <div className="space-y-6 relative border-l border-white/10 pl-6 ml-2">
                 {[
-                  { title: "Choose SLV Solar", desc: "We are an authorized franchise with approved solar products." },
+                  { title: "Choose SLV Solar", desc: "We are a trusted solar energy provider with certified solar products." },
                   { title: "Install a Solar System", desc: "Our experts design & install the best solar solution for you." },
                   { title: "Apply for Subsidy", desc: "We assist you in filing the subsidy application." },
                   { title: "Enjoy Savings!", desc: "Reduce your electricity bills & earn credits with net metering." }

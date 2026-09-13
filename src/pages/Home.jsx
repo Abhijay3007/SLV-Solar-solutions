@@ -9,8 +9,10 @@ import SectionHeading from '../components/SectionHeading';
 import CTAButton from '../components/CTAButton';
 import ServiceCard from '../components/ServiceCard';
 import ContactForm from '../components/ContactForm';
+import BrandsSection from '../components/BrandsSection';
 import heroResidentialSolar from '../assets/images/hero/hero-residential-solar.png';
 import { SERVICES, WHY_CHOOSE_US, BENEFITS, PROCESS_STEPS, PRODUCTS } from '../data/solarData';
+import { BUSINESS_INFO } from '../data/businessInfo';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -40,7 +42,7 @@ const Home = () => {
             <div className="lg:col-span-7 flex flex-col space-y-6 text-center lg:text-left">
               <span className="inline-flex items-center space-x-2 self-center lg:self-start bg-primary-light/35 border border-primary-light/50 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-secondary-light">
                 <Sun className="h-4 w-4 animate-spin text-secondary" style={{ animationDuration: '6s' }} />
-                <span>Authorized Franchise Riyansh Solar</span>
+                <span>Trusted Solar Solutions Provider</span>
               </span>
               
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.08] text-white">
@@ -165,7 +167,7 @@ const Home = () => {
           <SectionHeading 
             overline="Why Choose Us" 
             title="What Makes SLV Solar Stand Out"
-            subtitle="Backed by Riyansh Solar Power Plus Pvt Ltd. We ensure you get original warranties, customized sizing, and hassle-free assistance."
+            subtitle="We ensure you get original warranties, customized sizing, and hassle-free assistance for residential, commercial, and industrial setups."
             light={true}
           />
 
@@ -306,43 +308,7 @@ const Home = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Show top 3 products on homepage */}
-          {[
-            {
-              id: 'solar-panel-epc',
-              name: 'Solar Panel System (EPC Setup)',
-              category: 'Solar Panels',
-              iconName: 'sun',
-              description: 'Engineered, procured, and installed by Riyansh Solar Power Plus Pvt Ltd. High performance solar output for years to come.',
-              warranties: [
-                'Panel -- 25 Years of Performance Warranty',
-                'Inverter -- 5 Years + Extended Warranty Package'
-              ]
-            },
-            {
-              id: 'solar-diy-package',
-              name: 'DIY Grid Solar System Package',
-              category: 'Grid DIY',
-              iconName: 'settings',
-              description: 'Ready-to-assemble DIY package containing all matching materials to setup a grid connected solar station on your own terms. Installation is not included.',
-              warranties: [
-                'Panel -- 25 Years of Performance Warranty',
-                'Inverter -- 2 Years + Extended Warranty Package',
-                'Battery -- 2 Years DIY Ready Package'
-              ]
-            },
-            {
-              id: 'water-pump-system',
-              name: 'Solar Water Pump System',
-              category: 'Water Pump',
-              iconName: 'droplet',
-              description: 'Solar powered pumps ideal for farming, irrigation, and deep-borewells. Includes controller. Mount structure, pipes and installation can be provided at additional cost by Riyansh Solar.',
-              warranties: [
-                'Panel -- 25 Years of Performance Warranty',
-                'Pump -- 1 Year + Extended Warranty',
-                'Controller -- 1 Year + Extended Warranty'
-              ]
-            }
-          ].map((prod) => {
+          {PRODUCTS.slice(0, 3).map((prod) => {
             const dbProduct = PRODUCTS.find(p => p.id === prod.id);
             const image = dbProduct?.image;
             const isContextual = prod.name.toLowerCase().includes('pump') || prod.name.toLowerCase().includes('diy');
@@ -402,7 +368,10 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 9. CALL TO ACTION banner */}
+      {/* 9. BRANDS WE DEAL WITH SECTION */}
+      <BrandsSection />
+
+      {/* 10. CALL TO ACTION banner */}
       <section className="bg-primary text-white py-16 text-center px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary-dark via-primary to-primary-light opacity-80" />
         <div className="absolute top-[-50%] left-[-20%] w-[600px] h-[600px] bg-secondary/10 rounded-full blur-3xl pointer-events-none" />
@@ -418,14 +387,14 @@ const Home = () => {
             <CTAButton to="/contact" variant="secondary" className="w-full sm:w-auto">
               Get Free Consultation
             </CTAButton>
-            <CTAButton href="tel:+919353082680" variant="outline" className="w-full sm:w-auto !border-white !text-white hover:!bg-white/10">
-              Call Now: 93530 82680
+            <CTAButton href={BUSINESS_INFO.phoneTel} variant="outline" className="w-full sm:w-auto !border-white !text-white hover:!bg-white/10">
+              Call Now: {BUSINESS_INFO.phoneDisplay}
             </CTAButton>
           </div>
         </div>
       </section>
 
-      {/* 10. CONTACT SECTION */}
+      {/* 11. CONTACT SECTION */}
       <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-100">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
@@ -454,7 +423,7 @@ const Home = () => {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-primary">Office Address</h4>
-                  <p className="text-xs text-slate-500 mt-1">Banglore – 411051, Karnataka, India</p>
+                  <p className="text-xs text-slate-500 mt-1">{BUSINESS_INFO.locationFull}</p>
                 </div>
               </div>
 
@@ -465,8 +434,8 @@ const Home = () => {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-primary">Email Support</h4>
-                  <a href="mailto:manojpradeep586@gmail.com" className="text-xs text-slate-500 hover:text-primary hover:underline mt-1 block">
-                    manojpradeep586@gmail.com
+                  <a href={BUSINESS_INFO.emailMailto} className="text-xs text-slate-500 hover:text-primary hover:underline mt-1 block break-all">
+                    {BUSINESS_INFO.email}
                   </a>
                 </div>
               </div>
@@ -478,8 +447,8 @@ const Home = () => {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-primary">Direct Call / WhatsApp</h4>
-                  <a href="tel:+919353082680" className="text-xs text-slate-500 hover:text-primary hover:underline mt-1 block">
-                    +91 93530 82680
+                  <a href={BUSINESS_INFO.phoneTel} className="text-xs text-slate-500 hover:text-primary hover:underline mt-1 block">
+                    +91 {BUSINESS_INFO.phoneDisplay}
                   </a>
                 </div>
               </div>
@@ -491,20 +460,20 @@ const Home = () => {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-primary">Business Hours</h4>
-                  <p className="text-xs text-slate-500 mt-1">Sunday - Friday: 9 am - 8 pm (Saturday Closed)</p>
+                  <p className="text-xs text-slate-500 mt-1">{BUSINESS_INFO.workingHours}</p>
                 </div>
               </div>
 
             </div>
 
-            {/* Google maps placeholder */}
+            {/* Google maps button */}
             <div className="bg-emerald-50 rounded-3xl border border-emerald-100 p-6 flex flex-col justify-between items-center text-center">
-              <span className="text-xs uppercase font-extrabold text-primary block tracking-wider mb-2">Location Map (Bangalore)</span>
+              <span className="text-xs uppercase font-extrabold text-primary block tracking-wider mb-2">Location Map ({BUSINESS_INFO.location})</span>
               <p className="text-[11px] text-slate-500 max-w-xs leading-relaxed mb-4">
-                View our installation center coverage map area spanning Bangalore and neighboring municipalities.
+                View our installation center coverage area in Nelamangala and surrounding regions.
               </p>
               <a 
-                href="https://maps.google.com/?q=Bangalore" 
+                href={BUSINESS_INFO.mapQueryUrl} 
                 target="_blank" 
                 rel="noreferrer" 
                 className="inline-flex items-center space-x-1.5 text-xs text-primary hover:text-secondary font-bold uppercase tracking-wider"
