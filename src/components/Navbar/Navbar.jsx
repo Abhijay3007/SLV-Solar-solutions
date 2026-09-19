@@ -57,7 +57,7 @@ const Navbar = () => {
             <img 
               src={slvLogo} 
               alt="SLV Solar Solutions Logo" 
-              className="h-12 sm:h-14 w-auto object-contain transition-transform group-hover:scale-105 rounded-lg"
+              className="h-16 sm:h-20 lg:h-22 w-auto object-contain transition-transform group-hover:scale-105 rounded-xl shadow-sm"
             />
           </Link>
 
@@ -92,7 +92,7 @@ const Navbar = () => {
                 href={BUSINESS_INFO.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Visit our Instagram page"
+                aria-label="Instagram"
                 className="p-1.5 text-slate-500 hover:text-primary transition-colors duration-200 rounded-lg hover:bg-slate-50"
               >
                 <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24">
@@ -103,7 +103,7 @@ const Navbar = () => {
                 href={BUSINESS_INFO.facebookUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Visit our Facebook page"
+                aria-label="Facebook"
                 className="p-1.5 text-slate-500 hover:text-primary transition-colors duration-200 rounded-lg hover:bg-slate-50"
               >
                 <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24">
@@ -177,7 +177,7 @@ const Navbar = () => {
                   href={BUSINESS_INFO.instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Visit our Instagram page"
+                  aria-label="Instagram"
                   className="p-2 text-slate-600 hover:text-primary bg-slate-50 rounded-full border border-slate-100"
                 >
                   <Instagram className="h-5 w-5" />
@@ -186,7 +186,7 @@ const Navbar = () => {
                   href={BUSINESS_INFO.facebookUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Visit our Facebook page"
+                  aria-label="Facebook"
                   className="p-2 text-slate-600 hover:text-primary bg-slate-50 rounded-full border border-slate-100"
                 >
                   <Facebook className="h-5 w-5" />

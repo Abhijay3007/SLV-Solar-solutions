@@ -275,7 +275,7 @@ const Home = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {PROCESS_STEPS.map((step, idx) => (
             <div key={idx} className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-105 shadow-sm relative group hover:border-emerald-250 transition-colors">
-              <span className="block text-4xl sm:text-5xl font-black text-emerald-100 font-mono mb-6 group-hover:text-secondary-light transition-colors">
+              <span className="block text-4xl sm:text-5xl font-extrabold text-emerald-600 font-mono mb-6 group-hover:text-emerald-700 transition-colors">
                 {step.step}
               </span>
               <h3 className="text-lg font-bold text-primary mb-3">
