@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Sun, PhoneCall } from 'lucide-react';
+import { Menu, X, PhoneCall } from 'lucide-react';
 import { BUSINESS_INFO } from '../../data/businessInfo';
 import slvLogo from '../../assets/images/slv-logo.jpg';
 
@@ -37,6 +37,7 @@ const Navbar = () => {
 
   const handleLinkClick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    setIsOpen(false);
   };
 
   return (
@@ -140,7 +141,9 @@ const Navbar = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded-lg text-slate-600 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-              aria-label="Toggle menu"
+              aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={isOpen}
+              aria-controls="mobile-navigation"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -151,7 +154,7 @@ const Navbar = () => {
 
       {/* Mobile Drawer Navigation */}
       {isOpen && (
-        <div className="lg:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-slate-100 py-4 px-6 animate-fadeIn">
+        <div id="mobile-navigation" className="lg:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-slate-100 py-4 px-6 animate-fadeIn z-50">
           <div className="flex flex-col space-y-4">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path;
@@ -180,7 +183,9 @@ const Navbar = () => {
                   aria-label="Instagram"
                   className="p-2 text-slate-600 hover:text-primary bg-slate-50 rounded-full border border-slate-100"
                 >
-                  <Instagram className="h-5 w-5" />
+                  <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
                 </a>
                 <a
                   href={BUSINESS_INFO.facebookUrl}
@@ -189,7 +194,9 @@ const Navbar = () => {
                   aria-label="Facebook"
                   className="p-2 text-slate-600 hover:text-primary bg-slate-50 rounded-full border border-slate-100"
                 >
-                  <Facebook className="h-5 w-5" />
+                  <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.5 5H18V0h-3.808C10.592 0 9 1.583 9 4.615V8z"/>
+                  </svg>
                 </a>
               </div>
 
